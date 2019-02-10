@@ -21,6 +21,7 @@ server.on("request", (request, response) => {
             console.log(bodyString);
             // Set the staus code and response value
             response.statusCode = 200;
+            // This is equivalent to response.send(bodyString); response.end();
             response.end(bodyString);
         })
         .on("error", () => {
