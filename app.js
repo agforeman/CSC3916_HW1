@@ -9,6 +9,7 @@ server.on("request", (request, response) => {
         .on("end", () => {
             let bodyString = body.concat().toString();
             console.log(bodyString);
+            response.statusCode = 200;
             response.end(bodyString);
         })
         .on("error", () => {
